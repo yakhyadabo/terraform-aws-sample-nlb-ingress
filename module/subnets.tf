@@ -10,7 +10,7 @@ data "aws_vpc" "main" {
 # Subnets of the EC2 instances
 data "aws_subnets" "public" {
   filter {
-    name   = "vpc-id"
+    name   = local.vpc_id
     values = [data.aws_vpc.main.id]
   }
 
@@ -22,7 +22,7 @@ data "aws_subnets" "public" {
 # EC2 instances Subnets
 data "aws_subnets" "private" {
   filter {
-    name   = "vpc-id"
+    name   = local.vpc_id
     values = [data.aws_vpc.main.id]
   }
 

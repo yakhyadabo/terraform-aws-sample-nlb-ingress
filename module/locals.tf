@@ -6,4 +6,5 @@ locals {
     dmz         = "dmz"
     dba         = "dba"
   }
+  vpc_id = "vpc-id"
 }
