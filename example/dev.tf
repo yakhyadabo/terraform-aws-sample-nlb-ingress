@@ -1,5 +1,5 @@
 module "nginx" {
-  source               = "./module"
+  source               = "../module"
   region               = var.region
   vpc_name             = local.vpc_name
   environment          = var.project.environment
